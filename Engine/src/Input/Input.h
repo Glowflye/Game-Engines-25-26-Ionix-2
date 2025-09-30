@@ -8,7 +8,7 @@ namespace IonixEngine
         int x;
         int y;
 
-        MouseCoords(int x, int y) : x(y), y(y) {};
+        MouseCoords(int x, int y) : x(x), y(y) {};
     };
 
     class Input

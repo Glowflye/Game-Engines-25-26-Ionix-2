@@ -21,10 +21,6 @@ namespace IonixEngine
         layerInput = new LayerInput();
         m_LayerStack.PushLayer(layerInput);
 
-        MouseCoords mc = layerInput->m_Input->GetMousePosition();
-
-        std::cout << "Mouse X Pos: " << mc.x << std::endl;
-        std::cout << "Mouse Y Pos: " << mc.y << std::endl;
     }
 
     Application::~Application() 
@@ -44,6 +40,8 @@ namespace IonixEngine
 
     void Application::Run()
     {
+        int tempX = 0;
+        int tempY = 0;
         m_Running = true;
 
         while (m_Running)
@@ -52,6 +50,20 @@ namespace IonixEngine
             {
                 if(layer)
                     layer->OnUpdate();
+
+
+                MouseCoords mc = layerInput->m_Input->GetMousePosition();
+
+                if (mc.x != tempX || mc.y != tempY)
+                {
+                    system("cls");
+                    std::cout << "Mouse X Pos: " << mc.x << std::endl;
+                    tempX = mc.x;
+                    std::cout << "Mouse Y Pos: " << mc.y << std::endl;
+                    tempY = mc.y;
+                }
+
+                
             }
 
             m_Window->OnUpdate();

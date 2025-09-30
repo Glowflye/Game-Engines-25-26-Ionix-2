@@ -2,6 +2,7 @@
 
 namespace IonixEngine
 {
+
     MouseCoords IonixEngine::Input::GetMousePosition()
     {
         int x, y;
@@ -10,4 +11,5 @@ namespace IonixEngine
         MouseCoords mc(x, y);
         return mc;
     }
+
 }
