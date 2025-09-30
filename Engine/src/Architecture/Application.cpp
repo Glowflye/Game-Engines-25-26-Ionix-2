@@ -1,4 +1,5 @@
 #include "Application.h"
+#include "iostream"
 
 namespace IonixEngine {
     Application* Application::s_Instance = nullptr;
@@ -16,6 +17,14 @@ namespace IonixEngine
         //Initialise layers...
         layerEditor = new LayerEditor();
         m_LayerStack.PushLayer(layerEditor);
+
+        layerInput = new LayerInput();
+        m_LayerStack.PushLayer(layerInput);
+
+      MouseCoords mc = layerInput->m_Input->GetMousePosition();
+      std::cout << "mouse x pos: " << mc.x << std::endl;
+      std::cout << "mouse y pos: " << mc.y << std::endl;
+
     }
 
     Application::~Application() 
