@@ -55,6 +55,9 @@
     <ClInclude Include="src\third-party\imgui_impl_sdlrenderer2.h">
       <Filter>third-party</Filter>
     </ClInclude>
+    <ClInclude Include="LayerInput.h">
+      <Filter>LayerSystem\Layers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Architecture\Application.cpp">

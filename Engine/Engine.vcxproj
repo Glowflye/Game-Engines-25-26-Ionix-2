@@ -59,6 +59,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="LayerInput.h" />
     <ClInclude Include="src\Architecture\Application.h" />
     <ClInclude Include="src\Architecture\Macros.h" />
     <ClInclude Include="src\Architecture\main.h" />
