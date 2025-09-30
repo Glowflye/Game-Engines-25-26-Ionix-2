@@ -30,6 +30,13 @@ namespace IonixEngine
                     m_EventCallback(event);
                 }
                 break;
+            case SDL_WINDOWEVENT_MAXIMIZED:
+                if (m_EventCallback)
+                {
+                    WindowMaximizedEvent event;
+                    m_EventCallback(event);
+                }
+                break;
             }
         }
     }
